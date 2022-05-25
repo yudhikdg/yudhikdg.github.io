@@ -1,1 +1,0 @@
-https://github.com/skylot/jadx/releases/download/v1.2.0/jadx-gui-1.2.0-no-jre-win.exe
