@@ -7,6 +7,10 @@
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
 	<meta content="" name="author" />
+	<meta name="theme-color" content="#ffd900" />
+	<link rel="manifest" href="./manifest.json" />
+	<link rel="icon" type="image/png" href="./app/icons/icon-192x192.png" />
+	<link rel="apple-touch-icon" href="./app/icons/icon-192x192.png" />
 	
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
 	<link href="./assets/css/transparent/app.min.css" rel="stylesheet" />
@@ -1408,5 +1412,15 @@
 	<script src="./assets/plugins/lity/dist/lity.min.js"></script>
 	<script src="./assets/js/demo/profile.demo.js"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
+	
+	<!-- begin service worker (mode offline) -->
+	<script>
+		if ('serviceWorker' in navigator) {
+			window.addEventListener('load', function () {
+				navigator.serviceWorker.register('./sw.js');
+			});
+		}
+	</script>
+	<!-- end service worker -->
 </body>
 </html>
